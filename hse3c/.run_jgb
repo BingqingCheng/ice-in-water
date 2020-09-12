@@ -1,0 +1,13 @@
+#!/bin/bash
+
+wdir=$PWD
+
+for i in $(cat $wdir/.list_all | awk '{print $1}'  );do
+
+mkdir -p $wdir/$i
+cd $wdir/$i
+pwd
+$wdir/cif2crystal geom_sym
+
+cd $wdir
+done

@@ -1,0 +1,55 @@
+
+#######################################################################
+#
+#                 Cambridge Crystallographic Data Centre
+#                                CCDC 
+#
+#######################################################################
+#
+# If this CIF has been generated from an entry in the Cambridge 
+# Structural Database, then it will include bibliographic, chemical, 
+# crystal, experimental, refinement or atomic coordinate data resulting 
+# from the CCDC's data processing and validation procedures.
+#
+#######################################################################
+
+data_XV-hse3c
+_symmetry_cell_setting           triclinic
+_symmetry_space_group_name_H-M   'P -1'
+_symmetry_Int_Tables_number      2
+_space_group_name_Hall           '-P 1'
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 -x,-y,-z
+_cell_length_a                   5.81230233
+_cell_length_b                   6.19076075
+_cell_length_c                   6.22547871
+_cell_angle_alpha                89.074907
+_cell_angle_beta                 89.597435
+_cell_angle_gamma                89.333305
+_cell_volume                     223.959
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+O1 O 0.3706394329403 0.2505116018982 0.4681641455308
+H6 H 0.5166891898813 0.2500472852038 0.5447995956176
+H7 H 0.2811765996545 0.1368625564858 0.5389321977800
+O2 O 0.1340783740608 -0.4622403095689 -0.2434186831428
+H8 H 0.2064086523622 -0.5414944661854 -0.1239849555629
+H9 H 0.2080000451946 -0.5252960038761 -0.3686697389548
+O3 O 0.3594987877305 0.2463248606090 0.02507453149243
+H10 H 0.3732520795548 0.2455342059758 0.1818119365617
+H11 H 0.5130565713010 0.2467587123420 -0.03830009951076
+O4 O -0.2554371771035 0.2525731594097 -0.2492918468125
+H12 H -0.1420014282027 0.1342201134085 -0.2535585040032
+H13 H -0.1606720759960 0.3808426183376 -0.2495480818073
+O5 O 0.1214964905179 -0.01673240153898 -0.2526810519338
+H14 H 0.1257118960309 -0.1748899835248 -0.2439350128896
+H15 H 0.2009741622348 0.03929561930561 -0.1283392040512
+
+#END

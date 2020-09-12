@@ -1,0 +1,13 @@
+the ASAP package can be download from
+https://github.com/BingqingCheng/ASAP
+
+cat ../ice-54/ice-54.xyz ../liquid-1000/dataset_1000_eVAng.xyz > all.xyz 
+asap gen_desc -f all.xyz soap -n 6 -l 6 -c 6 -g 0.3
+
+# note: we have tried many combintations of soap hyper parameters, and the final PCA projection is qualitatively similar. We have tried, e.g.
+asap gen_desc -f all.xyz soap -n 8 -l 8 -c 6 -g 0.3 --crossover
+asap gen_desc -f all.xyz soap -n 6 -l 6 -c 6 -g 0.3 --crossover
+asap gen_desc -f all.xyz soap -n 8 -l 6 -c 8 -g 0.3
+asap gen_desc -f all.xyz soap -n 6 -l 6 -c 4 -g 0.3
+
+

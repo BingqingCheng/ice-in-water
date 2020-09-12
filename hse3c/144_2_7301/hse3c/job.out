@@ -1,0 +1,176 @@
+Sender: LSF System <lsfadmin@gwdd027>
+Subject: Job 4649758: <144_2_7301.hse3c> in cluster <gwd_hpc> Done
+
+Job <144_2_7301.hse3c> was submitted from host <gwdu101> by user <gbrande> in cluster <gwd_hpc>.
+Job was executed on host(s) <8*gwdd027>, in queue <mpi-short>, as user <gbrande> in cluster <gwd_hpc>.
+</usr/users/gbrande> was used as the home directory.
+</usr/users/gbrande/projects/bingqing/ice57/144_2_7301/hse3c> was used as the working directory.
+Started at Results reported on 
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/sh
+#BSUB -q mpi-short
+#BSUB -n 8
+#BSUB -R "span[hosts=1]"
+#BSUB -R scratch
+#BSUB -W 01:59
+#BSUB -C 0
+#BSUB -a openmpi
+#BSUB -o job.out 
+#BSUB -J 144_2_7301.hse3c
+
+ulimit -s unlimited
+module load intel/compiler/64/2017/17.0.2
+module load openmpi/intel/64/1.10.7
+
+export MPPcrystal="/usr/users/gbrande/src/crystal/bin/gwdg/17v3/MPPcrystal"
+export Pcrystal="/usr/users/gbrande/src/crystal/bin/gwdg/17v3/Pcrystal"
+
+mkdir -p /scratch/${USER}
+MYSCRATCH=`mktemp -d /scratch/${USER}/crystal.XXXXXXXX`
+WORKDIR=$PWD
+
+rm -f FINISHED
+touch RUNNING
+echo "scratch ${MYSCRATCH}" >> RUNNING
+echo "workdir ${WORKDIR}"   >> RUNNING
+
+#check file system access
+if [ ! -d $MYSCRATCH ]; then
+ echo "Unable to create MYSCRATCH  on $HOSTNAME. Must stop."
+ exit
+fi
+
+#check current location
+if [ "$PWD" == "$HOME" ]; then
+ echo "Cowardly refusing to copy the whole home directory"
+ exit
+fi
+
+#copy everything to node (will NOT copy directories for safety reasons. Add an 'r' only if absolutely sure what you are doing)
+#bwlimit limits bandwidth to 5000 kbytes/sec
+rm -f $WORKDIR/crystal.out
+rsync -q --bwlimit=5000 $WORKDIR/* $MYSCRATCH/
+cd $MYSCRATCH/
+
+#####################################################################################
+#jobs start here (if you have no idea what this script does, only edit this part...)
+#insert_favourite_QM_software > output.out 2>output.err
+
+#mpirun -np 8  ${MPPcrystal} < INPUT 1>&2 2>crystal.out
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.70 sec.
+    Max Memory :                                 115 MB
+    Average Memory :                             115.00 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              12
+    Max Threads :                                38
+    Run time :                                   3 sec.
+    Turnaround time :                            23 sec.
+
+The output (if any) follows:
+
+ ERROR **** scf input ****  FORMAT ERROR IN INPUT DECK
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 2 in communicator MPI_COMM_WORLD 
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT ERR         TELAPSE        2.13 TCPU        0.04
+Sender: LSF System <lsfadmin@gwdd141>
+Subject: Job 4651077: <144_2_7301.hse3c> in cluster <gwd_hpc> Done
+
+Job <144_2_7301.hse3c> was submitted from host <gwdu101> by user <gbrande> in cluster <gwd_hpc>.
+Job was executed on host(s) <8*gwdd141>, in queue <mpi-short>, as user <gbrande> in cluster <gwd_hpc>.
+</usr/users/gbrande> was used as the home directory.
+</usr/users/gbrande/projects/bingqing/ice57/144_2_7301/hse3c> was used as the working directory.
+Started at Results reported on 
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/sh
+#BSUB -q mpi-short
+#BSUB -n 8
+#BSUB -R "span[hosts=1]"
+#BSUB -R scratch
+#BSUB -W 01:59
+#BSUB -C 0
+#BSUB -a openmpi
+#BSUB -o job.out 
+#BSUB -J 144_2_7301.hse3c
+
+ulimit -s unlimited
+module load intel/compiler/64/2017/17.0.2
+module load openmpi/intel/64/1.10.7
+
+export MPPcrystal="/usr/users/gbrande/src/crystal/bin/gwdg/17v3/MPPcrystal"
+export Pcrystal="/usr/users/gbrande/src/crystal/bin/gwdg/17v3/Pcrystal"
+
+mkdir -p /scratch/${USER}
+MYSCRATCH=`mktemp -d /scratch/${USER}/crystal.XXXXXXXX`
+WORKDIR=$PWD
+
+rm -f FINISHED
+touch RUNNING
+echo "scratch ${MYSCRATCH}" >> RUNNING
+echo "workdir ${WORKDIR}"   >> RUNNING
+
+#check file system access
+if [ ! -d $MYSCRATCH ]; then
+ echo "Unable to create MYSCRATCH  on $HOSTNAME. Must stop."
+ exit
+fi
+
+#check current location
+if [ "$PWD" == "$HOME" ]; then
+ echo "Cowardly refusing to copy the whole home directory"
+ exit
+fi
+
+#copy everything to node (will NOT copy directories for safety reasons. Add an 'r' only if absolutely sure what you are doing)
+#bwlimit limits bandwidth to 5000 kbytes/sec
+rm -f $WORKDIR/crystal.out
+rsync -q --bwlimit=5000 $WORKDIR/* $MYSCRATCH/
+cd $MYSCRATCH/
+
+#####################################################################################
+#jobs start here (if you have no idea what this script does, only edit this part...)
+#insert_favourite_QM_software > output.out 2>output.err
+
+#mpirun -np 8  ${MPPcrystal} < INPUT 1>&2 2>crystal.out
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   236.87 sec.
+    Max Memory :                                 212 MB
+    Average Memory :                             179.33 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              12
+    Max Threads :                                38
+    Run time :                                   33 sec.
+    Turnaround time :                            42 sec.
+
+The output (if any) follows:
+

@@ -1,0 +1,59 @@
+# labels_of_the_phases tag('None' means eliminated from furthure calculations) 
+0              0
+11_2_15848   (1)
+115_2_114      None     Note:(elininated as it is the same as ice i)
+12_1_11        Ic
+12_2_29187   (2)
+12_2_32449   (3)
+14_2_48453   (4)
+144_2_7301      XVII
+151_2_4949650   (5)
+15_2_201714   (6)
+152_2_118474   (7)
+153_2_155471   (8)
+169_2_10608   (9)
+169_2_7915   (10)
+176_2_5256   (11)
+20_2_26425   (12)
+20_2_28176   (13)
+207_1_4435   (14)
+2_2_342692   (15)
+2_2_623457      Ih,XI
+53_3_726600   (16)
+58_2_511   (17)
+61_2_8842   (18)
+67_2_1444   (19)
+67_2_1563   (20)
+84_2_1419   (21)
+91_2_8335121   (22)
+ACO   (23)
+BSV   (24)
+DDR   (25)
+DOH       sH         Note:clathrate hydrate sH
+II        II
+i          i
+IRR   (26)
+IWV   (27)
+IX        III,IX
+LTA   (28)
+MAR       None       Note:(eliminated as it becomes the same as MTN after hse3c optimization, perhaps a mistake in c&p)
+MTN       sII        Note:clathrate hydrate sII
+NON   (29)
+PCOD8007225   (30)
+PCOD8036144   (31)
+PCOD8045578   (32)
+PCOD8047078   (33)
+PCOD8047931   (34)
+PCOD8172143   (35)
+PCOD8204698     None    Note:(elimiated as similar with 153_2_155471. It is a different unit cell and a different orientation, but it is the same structure. Perhaps PCOD8204698 has some kind of defect in the structure so that it needs a very large unit cell, but it is definitely not obvious where such a defect might be.)	
+PCOD8301974   (36)
+PCOD8321499   (37)
+PCOD8324623   (38)
+SGT   (39)
+VIII       VII,VIII
+VI         VI,XV
+XIII       V,XIII
+X          None       Note:(eliminated due to high density, broken symm following geop at zero press)
+XIV        XII,XIV
+XV         VI,XV   Note:(this is effectively a duplicate of VI)
+IV         IV      Note:(Ice IV is not listed in the original ice-57 data set because with the coarse k-point grid it exhibited exceptionally high configurational energy and was eliminated during preselection.)

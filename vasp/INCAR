@@ -1,0 +1,31 @@
+ENCUT = 1200
+ALGO = Conjugate
+ISYM = 3
+NELM = 100
+EDIFF = 1.0e-08
+PREC = Accurate
+ISMEAR = 0
+SIGMA = 0.01
+
+LREAL = Auto
+LASPH = .TRUE.
+
+# Geometry optimization
+IBRION = 2
+ISIF   = 3       # Relax ions only (2), relax everything (3)
+NSW    = 500     # Number of ionic steps
+EDIFFG = -1E-03  # Force convegence condition
+NFREE  = 10
+POTIM  = 0.2
+
+# I/O control
+LCHARG = .FALSE.  # Do not write out charge density
+LWAVE  = .FALSE.  # Do not write wave function file
+
+# revPBE0 functional
+LHFCALC = .TRUE
+GGA = RE
+
+# vdW D3 functional
+IVDW = 12
+

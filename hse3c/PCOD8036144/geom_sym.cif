@@ -1,0 +1,58 @@
+
+#######################################################################
+#
+#                 Cambridge Crystallographic Data Centre
+#                                CCDC 
+#
+#######################################################################
+#
+# If this CIF has been generated from an entry in the Cambridge 
+# Structural Database, then it will include bibliographic, chemical, 
+# crystal, experimental, refinement or atomic coordinate data resulting 
+# from the CCDC's data processing and validation procedures.
+#
+#######################################################################
+
+data_PCOD8036144-hse3c
+_symmetry_cell_setting           triclinic
+_symmetry_space_group_name_H-M   'P -1'
+_symmetry_Int_Tables_number      2
+_space_group_name_Hall           '-P 1'
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 -x,-y,-z
+_cell_length_a                   6.55657095
+_cell_length_b                   6.55829122
+_cell_length_c                   7.72638206
+_cell_angle_alpha                89.505658
+_cell_angle_beta                 64.997368
+_cell_angle_gamma                88.789968
+_cell_volume                     301.032
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+O1 O 0.2263835155332 -0.3521684997254 0.1325890417370
+H7 H 0.2641444687582 -0.4507222371695 0.02809923281425
+H8 H 0.08033583286488 -0.3918525572216 0.2342155997484
+O2 O -0.2267672047813 0.1488541335917 0.3611267573841
+H9 H -0.07858923534433 0.1116790954365 0.2587114514590
+H10 H -0.2163997516394 0.2920508039359 0.3926247769259
+O3 O 0.1952828944769 0.05482848628179 0.1061180408752
+H11 H 0.2086445867434 -0.09437423801149 0.09062658022183
+H12 H 0.2700324273933 0.08480123504742 0.1903186970341
+O4 O -0.3686492698523 -0.3549660728906 0.1464232672758
+H13 H -0.5280845881674 -0.3546126677847 0.1694562461938
+H14 H -0.3057517050016 -0.2315390466635 0.07020185625553
+O5 O 0.3616919055084 0.1302972309326 0.3585269291137
+H15 H 0.3039449458992 0.02168921468979 0.4556857561653
+H16 H 0.5224680730214 0.1359679469247 0.3297451178626
+O6 O 0.1909261193770 0.4457247419752 -0.3889343212602
+H17 H 0.2706748158487 0.4077828076321 -0.3094271987825
+H18 H 0.2472537255145 0.3491225548842 -0.4960278633010
+
+#END

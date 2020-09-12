@@ -1,0 +1,26 @@
+<simulation mode="static" verbosity="low">
+  <total_steps> 5000 </total_steps>
+  <total_time> 860000 </total_time>
+  <ffsocket name="cp2k" pbc="true">
+    <address> nid02029 </address>
+    <port> 19PORT </port>
+    <latency>1e-3</latency>
+  </ffsocket>
+  <system>
+    <initialize nbeads="1">
+         <file mode="xyz"> PREFIX-minE.xyz </file>
+    </initialize>
+    <forces>
+         <force forcefield ="cp2k"> </force>
+      </forces>
+        <motion mode="vibrations">
+            <vibrations mode="fd">
+                <pos_shift> 0.02 </pos_shift>
+                <energy_shift> 0.02 </energy_shift>
+                <prefix> ice </prefix>
+                <asr> crystal </asr>
+            </vibrations>
+        </motion>
+</system>
+</simulation>
+

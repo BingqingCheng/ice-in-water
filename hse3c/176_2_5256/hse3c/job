@@ -1,0 +1,64 @@
+#!/bin/sh
+#BSUB -q mpi-short
+#BSUB -n 8
+#BSUB -R "span[hosts=1]"
+#BSUB -R scratch
+#BSUB -W 01:59
+#BSUB -C 0
+#BSUB -a openmpi
+#BSUB -o job.out 
+#BSUB -J 176_2_5256.hse3c
+
+ulimit -s unlimited
+module load intel/compiler/64/2017/17.0.2
+module load openmpi/intel/64/1.10.7
+
+export MPPcrystal="/usr/users/gbrande/src/crystal/bin/gwdg/17v3/MPPcrystal"
+export Pcrystal="/usr/users/gbrande/src/crystal/bin/gwdg/17v3/Pcrystal"
+
+mkdir -p /scratch/${USER}
+MYSCRATCH=`mktemp -d /scratch/${USER}/crystal.XXXXXXXX`
+WORKDIR=$PWD
+
+rm -f FINISHED
+touch RUNNING
+echo "scratch ${MYSCRATCH}" >> RUNNING
+echo "workdir ${WORKDIR}"   >> RUNNING
+
+#check file system access
+if [ ! -d $MYSCRATCH ]; then
+ echo "Unable to create MYSCRATCH  on $HOSTNAME. Must stop."
+ exit
+fi
+
+#check current location
+if [ "$PWD" == "$HOME" ]; then
+ echo "Cowardly refusing to copy the whole home directory"
+ exit
+fi
+
+#copy everything to node (will NOT copy directories for safety reasons. Add an 'r' only if absolutely sure what you are doing)
+#bwlimit limits bandwidth to 5000 kbytes/sec
+rm -f $WORKDIR/crystal.out
+rsync -q --bwlimit=5000 $WORKDIR/* $MYSCRATCH/
+cd $MYSCRATCH/
+
+#####################################################################################
+#jobs start here (if you have no idea what this script does, only edit this part...)
+#insert_favourite_QM_software > output.out 2>output.err
+
+#mpirun -np 8  ${MPPcrystal} < INPUT 1>&2 2>crystal.out
+mpirun -np 8  ${Pcrystal} < INPUT 1>&2 2>$WORKDIR/crystal.out
+rm -f *pe*
+rm -f diis_Fg
+rm -f fort.98
+
+#end of job      (....and stop editing here.)
+#####################################################################################
+#copy everything back that is smaller than 5 gbyte
+
+rsync -q --bwlimit=5000 --max-size=5G $MYSCRATCH/* $WORKDIR/
+cd $WORKDIR
+rm -r $MYSCRATCH
+rm -f RUNNING
+touch FINISHED

@@ -1,0 +1,33 @@
+<simulation verbosity="high">
+  <output prefix="PREFIX-scale-SCALE">
+    <properties stride="1" flush="1" filename="out"> [ step, potential(0) ] </properties>
+    <trajectory filename="pos" stride="1" flush="1"> positions </trajectory>
+    <trajectory filename="frc" stride="1" flush="1"> forces </trajectory>
+  </output>
+  <total_steps> 100 </total_steps>
+  <total_time> 86000 </total_time>
+  <prng><seed> 12107 </seed></prng>
+  <ffsocket name="cp2k" pbc="true">
+    <address> nid02029 </address>
+    <port> 19PORT </port>
+    <latency>1e-3</latency>
+  </ffsocket>
+  <system>
+    <initialize nbeads="1">
+         <file mode="xyz"> relax_geometry_scale_SCALE-pos_0.xyz </file>
+    </initialize>
+    <forces>
+         <force forcefield ="cp2k"> </force>
+      </forces>
+        <motion mode="minimize">
+            <optimizer mode="lbfgs">
+                <tolerances>
+                    <energy> 1e-5 </energy>
+                    <position> 1e-3 </position>
+                    <force> 1e-4 </force>
+                </tolerances>
+            </optimizer>
+        </motion>
+</system>
+</simulation>
+

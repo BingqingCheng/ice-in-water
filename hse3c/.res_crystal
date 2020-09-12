@@ -1,0 +1,19 @@
+#!/bin/bash
+
+wdir=$PWD
+
+rm -f $wdir/.name $wdir/.rho $wdir/.elatt
+
+for i in $(cat $wdir/.list_all | awk '{print $1}' );do
+
+mkdir -p $wdir/$i
+echo $i | awk '{printf "%-15s\n", $1}' >>  $wdir/.name
+grep "PRIMITIVE CELL - C" $wdir/$i/$1/crystal.out  | tail -1 | awk '{print $11}' >> $wdir/.rho
+scal="$(grep "^$i\ " .list_all | awk '{printf "%16.10f\n", 1/$2}')"
+tmer2-jgb $i/$1 gas/$1 x $scal -1 $2 | awk '{printf "%8.2f\n", $6*43.3641}' >> $wdir/.elatt
+#echo "tmer2-jgb $i/$1 gas/$1 x $scal -1 $2 "
+
+done
+
+paste -d" " $wdir/.name $wdir/.rho $wdir/.elatt
+

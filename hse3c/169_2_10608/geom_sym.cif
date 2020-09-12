@@ -1,0 +1,58 @@
+
+#######################################################################
+#
+#                 Cambridge Crystallographic Data Centre
+#                                CCDC 
+#
+#######################################################################
+#
+# If this CIF has been generated from an entry in the Cambridge 
+# Structural Database, then it will include bibliographic, chemical, 
+# crystal, experimental, refinement or atomic coordinate data resulting 
+# from the CCDC's data processing and validation procedures.
+#
+#######################################################################
+
+data_169_2_10608-hse3c
+_symmetry_cell_setting           monoclinic
+_symmetry_space_group_name_H-M   'P 21'
+_symmetry_Int_Tables_number      4
+_space_group_name_Hall           'P 2yb'
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 -x,1/2+y,-z
+_cell_length_a                   8.33193379
+_cell_length_b                   5.95402930
+_cell_length_c                   8.45142342
+_cell_angle_alpha                90.000000
+_cell_angle_beta                 118.979862
+_cell_angle_gamma                90.000000
+_cell_volume                     366.767
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+O1 O -0.3153694075353 -0.01648679909288 0.1021377728000
+H7 H -0.2396493336425 -0.1355181705172 0.09042894955165
+H8 H -0.3854290326705 0.05531417107208 -0.01770288859593
+O2 O 0.4922703174920 -0.2814409634454 0.2055619036707
+H9 H 0.3907474889233 -0.2099558547102 0.2162971119166
+H10 H 0.5510507103031 -0.1658957537423 0.1670345448960
+O3 O 0.2128193135886 0.06519309769301 -0.4966688808106
+H11 H 0.3282964731812 0.1261200105397 -0.3975695981489
+H12 H 0.1683219637396 -0.04099794518173 -0.4368397263804
+O4 O 0.09873823849777 0.1483389016868 -0.09242698343357
+H13 H 0.09024587541411 0.02826336559433 -0.1765412715073
+H14 H 0.1385601960528 0.07315570067842 0.02480754119133
+O5 O -0.09043548459723 0.3142402198774 0.3140791285112
+H15 H -0.1749308507184 0.1938813076323 0.2401186083048
+H16 H 0.02866310237076 0.2397792811723 0.3888704094515
+O6 O 0.2030378948951 -0.09931987603975 0.2070408299077
+H17 H 0.09890278444261 -0.2048224489826 0.1656256265891
+H18 H 0.2178061684962 -0.03545824423432 0.3214238125890
+
+#END
