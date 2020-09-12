@@ -4,6 +4,9 @@
 
 Contents:
 
+* ice-water-dataset.html: an interactive structure-property explorer of the ice and liquid water structures, which is an html file that can run in any standard web browser.
+ 
+
 * ./cp2k/: revPBE0-D3 DFT input files of ice/liquid using CP2K
 
 * ./vasp/: revPBE0-D3 DFT input files of ice using VASP
